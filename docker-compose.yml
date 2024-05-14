@@ -1,0 +1,15 @@
+services:
+
+  subweb:
+    build:
+      dockerfile: ./Dockerfile
+    image: zhoushun98/subweb-local
+    restart: always
+    ports:
+      - 58080:80
+
+  subconverter:
+    image: tindy2013/subconverter
+    restart: always
+    ports:
+      - 25500:25500
